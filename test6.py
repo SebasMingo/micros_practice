@@ -12,5 +12,20 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+usarios = {}
+
+@app.route('/registro', methods=['POST'])
+def registro():
+    datos = request.get_json()
+    email = datos["email"]
+    contrasena = datos["contrasena"]
+
+
+    if not email or not contrasena:
+        
+
+
+
+
 if __name__ == 'main':
     app.run(debug=True)
